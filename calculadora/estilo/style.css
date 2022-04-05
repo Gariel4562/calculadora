@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    margin:0px;
+    padding:0px;
+}
+
+
+:root {
+    --fonte-destaque:'Roboto', sans-serif; 
+
+
+
+
+
+}
+
+body {
+    background-image: linear-gradient(to right, #233329, #41b883);
+}
+
+
+h1 {
+    font-family: var(--fonte-destaque);
+    text-align:center;
+    background-image: linear-gradient(to right, transparent, lightgreen, transparent);
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container > button {
+    cursor:pointer;
+    font-size:2em;
+    border:1px solid black;
+    outline: none;
+    background-color: #111;
+    color:white;
+
+
+
+
+
+
+}
+
+.grid-container > button:hover {
+    background-color: #eee;
+    color: #111;
+}
+
+.grid-container > .operator {
+    background-color: #41b88375;
+    
+
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.grid-container > .output {
+    grid-column: 1 / -1;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding:10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .previou-operand {
+    color: rgba(255, 255, 255, 0.741);
+    font-size: 1.5em;
+}
+
+.grid-container > .output > .current-operand {
+    color:white;
+    font-size: 2.5em;
+}
